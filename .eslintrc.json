@@ -2,5 +2,13 @@
   "extends": ["@alleyinteractive/eslint-config/typescript-react"],
   "parserOptions": {
     "project": "./tsconfig.eslint.json"
-  }
+  },
+  "overrides": [
+    {
+        "files": ["*.tsx", "*.d.ts"],
+        "rules": {
+            "no-undef": "off"
+        }
+    }
+  ]
 }

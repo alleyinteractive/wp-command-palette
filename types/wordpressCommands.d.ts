@@ -2,7 +2,7 @@ declare module '@wordpress/commands' {
   export type Command = {
     name: string;
     label: string;
-    icon?: React.ReactNode;
+    icon?: import('react').ReactNode;
     callback: (args: { close: () => void }) => void;
   };
 
