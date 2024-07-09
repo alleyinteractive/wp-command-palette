@@ -9,6 +9,34 @@
 
 namespace Create_WordPress_Plugin;
 
+function action__admin_enqueue_scripts() {
+	$screen = get_current_screen();
+
+	// Disable for block editor pages.
+	if ( $screen && $screen->is_block_editor ) {
+		return;
+	}
+
+	$dir_entry_name = 'admin';
+	$dependencies = get_asset_dependency_array( 'command-palette' );
+	// var_dump($dependencies);exit;
+	$version = get_asset_version( 'command-palette' );
+
+	// Enqueue the admin script.
+	wp_enqueue_script(
+		'create-wordpress-plugin-admin',
+		get_entry_asset_url( 'command-palette' ),
+		$dependencies,
+		$version,
+		true
+	);
+
+	wp_enqueue_style( 'wp-components' );
+	wp_enqueue_style( 'wp-elements' );
+	wp_enqueue_style( 'wp-commands' );
+}
+add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\action__admin_enqueue_scripts' );
+
 /**
  * Validate file paths to prevent a PHP error if a file doesn't exist.
  *
@@ -109,19 +137,4 @@ function get_entry_asset_url( string $dir_entry_name, $filename = 'index.js' ) {
 	}
 
 	return '';
-}
-
-/**
- * Load the php index files from the build directory for blocks, slotfills, and any other scripts with an index.php file.
- */
-function load_scripts(): void {
-	$files = glob( CREATE_WORDPRESS_PLUGIN_DIR . '/build/**/index.php' );
-
-	if ( ! empty( $files ) ) {
-		foreach ( $files as $path ) {
-			if ( validate_path( $path ) ) {
-				require_once $path;  // phpcs:ignore WordPressVIPMinimum.Files.IncludingFile.IncludingFile, WordPressVIPMinimum.Files.IncludingFile.UsingVariable
-			}
-		}
-	}
 }

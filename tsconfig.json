@@ -13,6 +13,10 @@
     "paths": {
       "@/*": ["*"]
     },
+    "typeRoots": [
+      "node_modules/@types",
+      "types"
+    ],
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
