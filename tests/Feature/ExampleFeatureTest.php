@@ -1,13 +1,13 @@
 <?php
 /**
- * Create WordPress Plugin Tests: Example Feature Test
+ * WP Command Palette Tests: Example Feature Test
  *
- * @package create-wordpress-plugin
+ * @package wp-command-palette
  */
 
-namespace Create_WordPress_Plugin\Tests\Feature;
+namespace Alley\WP\Command_Palette\Tests\Feature;
 
-use Create_WordPress_Plugin\Tests\TestCase;
+use Alley\WP\Command_Palette\Tests\TestCase;
 
 /**
  * A test suite for an example feature.

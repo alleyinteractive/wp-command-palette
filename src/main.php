@@ -2,10 +2,10 @@
 /**
  * The main plugin function
  *
- * @package create-wordpress-plugin
+ * @package wp-command-palette
  */
 
-namespace Create_WordPress_Plugin;
+namespace Alley\WP\Command_Palette;
 
 use Alley\WP\Features\Group;
 

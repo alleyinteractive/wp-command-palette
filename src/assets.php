@@ -4,10 +4,10 @@
  *
  * phpcs:disable phpcs:ignore Squiz.PHP.CommentedOutCode.Found
  *
- * @package create-wordpress-plugin
+ * @package wp-command-palette
  */
 
-namespace Create_WordPress_Plugin;
+namespace Alley\WP\Command_Palette;
 
 function action__admin_enqueue_scripts() {
 	$screen = get_current_screen();
@@ -24,7 +24,7 @@ function action__admin_enqueue_scripts() {
 
 	// Enqueue the admin script.
 	wp_enqueue_script(
-		'create-wordpress-plugin-admin',
+		'wp-command-palette-admin',
 		get_entry_asset_url( 'command-palette' ),
 		$dependencies,
 		$version,
@@ -59,7 +59,7 @@ function get_entry_dir_path( string $dir_entry_name, bool $dir = false ): string
 	// The relative path from the plugin root.
 	$asset_build_dir = "/build/{$dir_entry_name}/";
 	// Set the absolute file path from the root directory.
-	$asset_dir_path = CREATE_WORDPRESS_PLUGIN_DIR . $asset_build_dir;
+	$asset_dir_path = WP_COMMAND_PALETTE_DIR . $asset_build_dir;
 
 	if ( validate_path( $asset_dir_path ) ) {
 		// Negotiate the base path.

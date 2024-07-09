@@ -1,16 +1,16 @@
 <?php
 /**
- * Create WordPress Plugin Tests: Base Test Class
+ * WP Command Palette Tests: Base Test Class
  *
- * @package create-wordpress-plugin
+ * @package wp-command-palette
  */
 
-namespace Create_WordPress_Plugin\Tests;
+namespace Alley\WP\Command_Palette\Tests;
 
 use Mantle\Testkit\Test_Case as TestkitTest_Case;
 
 /**
- * Create WordPress Plugin Base Test Case
+ * WP Command Palette Base Test Case
  */
 abstract class TestCase extends TestkitTest_Case {
 

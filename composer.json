@@ -1,17 +1,17 @@
 {
-    "name": "alleyinteractive/create-wordpress-plugin",
-    "description": "A skeleton WordPress plugin",
+    "name": "alleyinteractive/wp-command-palette",
+    "description": "Admin-wide command palette for easy access to setting pages.",
     "type": "wordpress-plugin",
     "keywords": [
         "alleyinteractive",
-        "create-wordpress-plugin"
+        "wp-command-palette"
     ],
-    "homepage": "https://github.com/alleyinteractive/create-wordpress-plugin",
+    "homepage": "https://github.com/alleyinteractive/wp-command-palette",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "author_name",
-            "email": "email@domain.com"
+            "name": "Sean Fisher",
+            "email": "sean@alley.com"
         }
     ],
     "require": {
@@ -34,16 +34,16 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Create_WordPress_Plugin\\Tests\\": "tests"
+            "Alley\WP\Command_Palette\\Tests\\": "tests"
         }
     },
     "extra": {
         "wordpress-autoloader": {
             "autoload": {
-                "Create_WordPress_Plugin\\": "src"
+                "Alley\\WP\\Command_Palette": "src"
             },
             "autoload-dev": {
-                "Create_WordPress_Plugin\\Tests\\": "tests"
+                "Alley\\WP\\Command_Palette\\Tests": "tests"
             }
         }
     },

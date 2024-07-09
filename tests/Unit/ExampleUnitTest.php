@@ -1,11 +1,11 @@
 <?php
 /**
- * Create WordPress Plugin Tests: Example Unit Test
+ * WP Command Palette Tests: Example Unit Test
  *
- * @package create-wordpress-plugin
+ * @package wp-command-palette
  */
 
-namespace Create_WordPress_Plugin\Tests\Unit;
+namespace Alley\WP\Command_Palette\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 
