@@ -34,7 +34,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Alley\WP\Command_Palette\\Tests\\": "tests"
+            "Alley\\WP\\Command_Palette\\Tests\\": "tests"
         }
     },
     "extra": {
