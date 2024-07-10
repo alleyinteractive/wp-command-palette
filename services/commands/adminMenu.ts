@@ -8,7 +8,6 @@ const slugify = (text: string) => text.toLowerCase().replace(/: /g, '-').replace
  */
 const adminMenu = (): Command[] => {
   const menus = document.querySelectorAll('ul#adminmenu > li');
-  // const links = document.querySelectorAll('#adminmenu .menu-top a');
   const index: Command[] = [];
 
   Array.from(menus).forEach((menu) => {
@@ -26,7 +25,7 @@ const adminMenu = (): Command[] => {
 
     index.push({
       label: `Go to ${parentMenuLink.textContent}`,
-      name: `wp-command-palette-${slugify(parentMenuLink.textContent || href)}`,
+      name: `wp-command-palette/${slugify(parentMenuLink.textContent || href)}`,
       icon: arrowRight,
       callback: () => {
         window.location.href = href;
@@ -52,43 +51,13 @@ const adminMenu = (): Command[] => {
 
       index.push({
         label: `Go to: ${parentMenuLink.textContent} – ${submenuItem.textContent}`,
-        name: `wp-command-palette-${slugify(`${parentMenuLink.textContent}: ${submenuItem.textContent}`)}`,
+        name: `wp-command-palette/${slugify(`${parentMenuLink.textContent}: ${submenuItem.textContent}`)}`,
         icon: arrowRight,
         callback: () => {
           window.location.href = url;
         },
       });
     });
-
-    // Add the parent menu
-    // const url = link.getAttribute('href');
-
-    // if (!url || url === '#') {
-    //   return;
-    // }
-
-    // let label = link.textContent;
-
-    // if (url.endsWith('edit-comments.php')) {
-    //   label = 'Comments';
-    // }
-
-    // // Check if the link is a
-
-    // if (url && label) {
-    //   index.push({
-    //     label: `Go to Settings: ${label}`,
-    //     name: url,
-    //     icon: arrowRight,
-    //     callback: () => {
-    //       window.location.href = url;
-    //     },
-    //   });
-    // }
-
-
-    // Collect all available submenu items from the parent menu.
-    // const submenus = menus.querySelectorAll('.wp-submenu li:not(.wp-first-item) a');
   });
 
   return index;
