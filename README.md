@@ -35,6 +35,11 @@ items and allow you to easily search for them in the
 [WordPress Command Palette](https://make.wordpress.org/core/2023/07/17/introducing-the-wordpress-command-palette-api/). You can open the command palette
 by pressing `cmd + k` or `ctrl + k` on Windows.
 
+At some point in the future Gutenberg
+[will be adding](https://github.com/WordPress/gutenberg/pull/54515)
+site-wide command palette support. This plugin will be updated to support that
+when it is available.
+
 ## Testing
 
 Run `npm run lint` to run ESLint against all JavaScript files. Linting will also
