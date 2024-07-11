@@ -1,8 +1,7 @@
 import { arrowRight } from '@wordpress/icons';
 import { __, sprintf } from '@wordpress/i18n';
 import type { Command } from '@wordpress/commands';
-
-const slugify = (text: string) => text.toLowerCase().replace(/: /g, '-').replace(/\s+/g, '-');
+import slugify from '@/services/slugify';
 
 /**
  * Collect all admin menu links as possible commands.
