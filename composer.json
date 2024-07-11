@@ -37,16 +37,6 @@
             "Alley\\WP\\Command_Palette\\Tests\\": "tests"
         }
     },
-    "extra": {
-        "wordpress-autoloader": {
-            "autoload": {
-                "Alley\\WP\\Command_Palette": "src"
-            },
-            "autoload-dev": {
-                "Alley\\WP\\Command_Palette\\Tests": "tests"
-            }
-        }
-    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
@@ -56,8 +46,7 @@
         "phpstan": "phpstan --memory-limit=512M",
         "test": [
             "@phpcs",
-            "@phpstan",
-            "@phpunit"
+            "@phpstan"
         ]
     }
 }

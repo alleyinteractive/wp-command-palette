@@ -1,13 +1,11 @@
 import { useMemo } from 'react';
-import { CommandMenu, useCommandLoader } from '@wordpress/commands';
+import { useCommandLoader } from '@wordpress/commands';
 import commands from '@/services/commands';
 
 /**
- * Command Palette Application
- *
- * @todo Add support for use of our commands inside block editor.
+ * Command Palette Application within the Block Editor as a plugin
  */
-function App() {
+function AppBlockEditor() {
   const availableCommands = useMemo(() => commands(), []);
 
   useCommandLoader({
@@ -18,9 +16,7 @@ function App() {
     }),
   });
 
-  return (
-    <CommandMenu />
-  );
+  return null;
 }
 
-export default App;
+export default AppBlockEditor;

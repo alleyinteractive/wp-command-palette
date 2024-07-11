@@ -6,7 +6,6 @@ parameters:
 	level: max
 
 	paths:
-		- blocks/
 		- entries/
 		- src/
 		- wp-command-palette.php

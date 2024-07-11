@@ -9,31 +9,34 @@
 
 namespace Alley\WP\Command_Palette;
 
-function action__admin_enqueue_scripts() {
+/**
+ * Enqueue the application's admin assets.
+ */
+function action__admin_enqueue_scripts(): void {
 	$screen = get_current_screen();
 
-	// Disable for block editor pages.
 	if ( $screen && $screen->is_block_editor ) {
-		return;
+		wp_enqueue_script(
+			'wp-command-palette-block-editor',
+			get_entry_asset_url( 'app-block-editor' ),
+			get_asset_dependency_array( 'app-block-editor' ),
+			get_asset_version( 'app-block-editor' ),
+			true,
+		);
+	} else {
+		// Enqueue the application outside the block editor.
+		wp_enqueue_script(
+			'wp-command-palette-outside-block-editor',
+			get_entry_asset_url( 'app-outside-block-editor' ),
+			get_asset_dependency_array( 'app-outside-block-editor' ),
+			get_asset_version( 'app-outside-block-editor' ),
+			true
+		);
+
+		wp_enqueue_style( 'wp-components' );
+		wp_enqueue_style( 'wp-elements' );
+		wp_enqueue_style( 'wp-commands' );
 	}
-
-	$dir_entry_name = 'admin';
-	$dependencies = get_asset_dependency_array( 'command-palette' );
-	// var_dump($dependencies);exit;
-	$version = get_asset_version( 'command-palette' );
-
-	// Enqueue the admin script.
-	wp_enqueue_script(
-		'wp-command-palette-admin',
-		get_entry_asset_url( 'command-palette' ),
-		$dependencies,
-		$version,
-		true
-	);
-
-	wp_enqueue_style( 'wp-components' );
-	wp_enqueue_style( 'wp-elements' );
-	wp_enqueue_style( 'wp-commands' );
 }
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\action__admin_enqueue_scripts' );
 
