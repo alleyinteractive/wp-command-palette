@@ -4,7 +4,7 @@ Contributors: alleyinteractive
 
 Tags: alleyinteractive, wp-command-palette
 
-Stable tag: 0.0.0
+Stable tag: 0.1.0
 
 Requires at least: 6.4
 
