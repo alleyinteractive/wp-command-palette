@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react';
+import { StrictMode } from 'react';
 import { registerPlugin } from '@wordpress/plugins';
 import AppBlockEditor from './app';
 
