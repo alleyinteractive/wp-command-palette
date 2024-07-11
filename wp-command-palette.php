@@ -2,12 +2,12 @@
 /**
  * Plugin Name: WP Command Palette
  * Plugin URI: https://github.com/alleyinteractive/wp-command-palette
- * Description: Admin-wide command palette for easy access to setting pages.
+ * Description: Extend the WordPress Command Palette with all the available admin menu items.
  * Version: 0.0.0
  * Author: Sean Fisher
  * Author URI: https://github.com/alleyinteractive/wp-command-palette
- * Requires at least: 5.9
- * Tested up to: 6.2
+ * Requires at least: 6.3
+ * Tested up to: 6.5
  *
  * Text Domain: wp-command-palette
  * Domain Path: /languages/

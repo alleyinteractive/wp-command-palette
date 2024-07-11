@@ -6,15 +6,15 @@ Tags: alleyinteractive, wp-command-palette
 
 Stable tag: 0.0.0
 
-Requires at least: 5.9
+Requires at least: 6.3
 
-Tested up to: 6.1
+Tested up to: 6.5
 
 Requires PHP: 8.1
 
 License: GPL v2 or later
 
-Admin-wide command palette for easy access to setting pages in and outside of the block editor.
+Extend the WordPress Command Palette with all the available admin menu items.
 
 ## Installation
 
