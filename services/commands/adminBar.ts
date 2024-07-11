@@ -38,10 +38,16 @@ const adminBar = () => {
     });
   }
 
+  const currentDashboardHref = window.location.href.replace(/\/wp-admin\/.*/, '/wp-admin/');
   const siteList = document.querySelectorAll('#wpadminbar #wp-admin-bar-my-sites-list > li > a');
 
   if (siteList) {
     Array.from(siteList).forEach((site, i) => {
+      // Exclude the site if this is the current site we're on.
+      if (currentDashboardHref === site.getAttribute('href')) {
+        return;
+      }
+
       index.push({
         name: `wp-command-palette/site-${slugify(site.textContent || `site-${i}`)}`,
         label: sprintf(
