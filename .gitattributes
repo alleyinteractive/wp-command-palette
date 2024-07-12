@@ -5,13 +5,20 @@
 #
 # Via WPCS.
 #
+/.editorconfig expore-ignore
+/.eslintignore expore-ignore
+/.eslintrc.json expore-ignore
 /.github export-ignore
-/.phpcs.xml export-ignore
+/.npmrc expore-ignore
+/.nvmrc expore-ignore
+/.phpcs expore-ignore
 /.phpcs export-ignore
-/phpunit.xml export-ignore
-/tests export-ignore
+/.phpcs.xml expore-ignore
+/.phpcs.xml export-ignore
+/.phpunit.result.cache expore-ignore
 /configure.php export-ignore
 /Makefile export-ignore
+/phpunit.xml export-ignore
 /tests export-ignore
 /types export-ignore
 
