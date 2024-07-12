@@ -8,7 +8,7 @@ import slugify from '@/services/slugify';
  */
 const adminBar = () => {
   const index: Command[] = [];
-  const mySites = document.querySelector('#wpadminbar #wp-admin-bar-my-sites > a');
+  const mySites = document.querySelector<HTMLAnchorElement>('#wpadminbar #wp-admin-bar-my-sites > a');
 
   if (mySites) {
     index.push({
@@ -18,28 +18,24 @@ const adminBar = () => {
         __('Go to: Network - %s', 'wp-command-palette'),
         mySites.textContent,
       ),
-      callback: () => {
-        window.location.href = `${mySites.getAttribute('href')}`;
-      },
+      callback: () => mySites.click(),
       icon: globe,
     });
   }
 
-  const networkAdmin = document.querySelector('#wpadminbar #wp-admin-bar-my-sites-super-admin a');
+  const networkAdmin = document.querySelector<HTMLAnchorElement>('#wpadminbar #wp-admin-bar-my-sites-super-admin a');
 
   if (networkAdmin) {
     index.push({
       name: 'wp-command-palette/network-admin-dashboard',
       label: __('Go to: Network Admin Dashboard', 'wp-command-palette'),
-      callback: () => {
-        window.location.href = `${networkAdmin.getAttribute('href')}`;
-      },
+      callback: () => networkAdmin.click(),
       icon: globe,
     });
   }
 
   const currentDashboardHref = window.location.href.replace(/\/wp-admin\/.*/, '/wp-admin/');
-  const siteList = document.querySelectorAll('#wpadminbar #wp-admin-bar-my-sites-list > li > a');
+  const siteList = document.querySelectorAll<HTMLAnchorElement>('#wpadminbar #wp-admin-bar-my-sites-list > li > a');
 
   if (siteList) {
     Array.from(siteList).forEach((site, i) => {
@@ -55,43 +51,37 @@ const adminBar = () => {
           __('Go to: Site Dashboard - %s', 'wp-command-palette'),
           site.textContent,
         ),
-        callback: () => {
-          window.location.href = `${site.getAttribute('href')}`;
-        },
+        callback: () => site.click(),
         icon: wordpress,
       });
     });
   }
 
-  const editProfile = document.querySelector('#wpadminbar #wp-admin-bar-user-info a');
+  const editProfile = document.querySelector<HTMLAnchorElement>('#wpadminbar #wp-admin-bar-user-info a');
 
   if (editProfile) {
     index.push({
       name: 'wp-command-palette/edit-profile',
       label: __('Go to: Edit Profile', 'wp-command-palette'),
-      callback: () => {
-        window.location.href = `${editProfile.getAttribute('href')}`;
-      },
+      callback: () => editProfile.click(),
       icon: wordpress,
     });
   }
 
-  const logout = document.querySelector('#wpadminbar #wp-admin-bar-logout a');
+  const logout = document.querySelector<HTMLAnchorElement>('#wpadminbar #wp-admin-bar-logout a');
 
   if (logout) {
     index.push({
       name: 'wp-command-palette/logout',
       label: __('Log Out', 'wp-command-palette'),
-      callback: () => {
-        window.location.href = `${logout.getAttribute('href')}`;
-      },
+      callback: () => logout.click(),
       icon: lockOutline,
     });
   }
 
   // Play well with the Alley wp-environment-switcher plugin.
   // link: https://github.com/alleyinteractive/wp-environment-switcher
-  const environmentSwitcher = document.querySelectorAll('#wpadminbar #wp-admin-bar-wp-environment-switcher-default a');
+  const environmentSwitcher = document.querySelectorAll<HTMLAnchorElement>('#wpadminbar #wp-admin-bar-wp-environment-switcher-default a');
 
   if (environmentSwitcher) {
     Array.from(environmentSwitcher).forEach((environment, i) => {
@@ -102,9 +92,7 @@ const adminBar = () => {
           __('Switch to: %s Environment', 'wp-command-palette'),
           environment.textContent,
         ),
-        callback: () => {
-          window.location.href = `${environment.getAttribute('href')}`;
-        },
+        callback: () => environment.click(),
         icon: globe,
       });
     });
