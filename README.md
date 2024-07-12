@@ -4,9 +4,9 @@ Contributors: alleyinteractive
 
 Tags: alleyinteractive, wp-command-palette
 
-Stable tag: 0.0.0
+Stable tag: 0.1.0
 
-Requires at least: 6.3
+Requires at least: 6.4
 
 Tested up to: 6.5
 
@@ -33,7 +33,7 @@ Activate the plugin in WordPress and use it like so:
 When activated, the plugin will read all the available WordPress admin menu/bar
 items and allow you to easily search for them in the
 [WordPress Command Palette](https://make.wordpress.org/core/2023/07/17/introducing-the-wordpress-command-palette-api/). You can open the command palette
-by pressing `cmd + k` or `ctrl + k` on Windows.
+by pressing `cmd + k` or `ctrl + k` on Windows. The plugin requires WordPress 6.4 or higher.
 
 At some point in the future Gutenberg
 [will be adding](https://github.com/WordPress/gutenberg/pull/54515)

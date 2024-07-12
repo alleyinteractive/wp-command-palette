@@ -49,9 +49,7 @@ const adminMenu = (): Command[] => {
       ),
       name: `wp-command-palette/${slugify(parentMenuLinkText || parentMenuHref)}`,
       icon: arrowRight,
-      callback: () => {
-        window.location.href = parentMenuHref;
-      },
+      callback: () => parentMenuLink.click(),
     });
 
     if (!menu.classList.contains('wp-has-submenu')) {
@@ -82,9 +80,7 @@ const adminMenu = (): Command[] => {
         ),
         name: `wp-command-palette/${slugify(`${parentMenuLinkText}: ${submenuItem.textContent}`)}`,
         icon: arrowRight,
-        callback: () => {
-          window.location.href = url;
-        },
+        callback: () => (submenuItem as HTMLAnchorElement).click(),
       });
     });
   });
