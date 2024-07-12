@@ -12,6 +12,8 @@
 /tests export-ignore
 /configure.php export-ignore
 /Makefile export-ignore
+/tests export-ignore
+/types export-ignore
 
 #
 # Auto detect text files and perform LF normalization.

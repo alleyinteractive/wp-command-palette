@@ -1,10 +1,10 @@
-# WP Command Palette
+# Command Palette Extension
 
 Contributors: alleyinteractive
 
 Tags: alleyinteractive, wp-command-palette
 
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 
 Requires at least: 6.4
 
