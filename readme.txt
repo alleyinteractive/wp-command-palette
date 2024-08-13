@@ -1,24 +1,17 @@
-# Command Palette Extension
-
+=== Command Palette Extension ===
 Contributors: alleyinteractive
-
 Tags: command-palette, alleyinteractive, wp-command-palette
-
 Stable tag: 0.1.1
-
 Requires at least: 6.4
-
 Tested up to: 6.5
-
 Requires PHP: 8.1
-
 License: GPL v2 or later
 
 Extend the WordPress Command Palette with all the available admin menu items.
 
 ## Installation
 
-You can install the package via Composer:
+You can install the package via Composer or download it from WordPress.org:
 
 ```bash
 composer require alleyinteractive/wp-command-palette
