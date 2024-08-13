@@ -21,10 +21,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Root directory to this plugin.
- */
-define( 'WP_COMMAND_PALETTE_DIR', __DIR__ );
-
 // Load the plugin's main files.
 require_once __DIR__ . '/src/assets.php';

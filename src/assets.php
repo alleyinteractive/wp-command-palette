@@ -62,7 +62,7 @@ function get_entry_dir_path( string $dir_entry_name, bool $dir = false ): string
 	// The relative path from the plugin root.
 	$asset_build_dir = "/build/{$dir_entry_name}/";
 	// Set the absolute file path from the root directory.
-	$asset_dir_path = WP_COMMAND_PALETTE_DIR . $asset_build_dir;
+	$asset_dir_path = dirname( __DIR__ ) . $asset_build_dir;
 
 	if ( validate_path( $asset_dir_path ) ) {
 		// Negotiate the base path.

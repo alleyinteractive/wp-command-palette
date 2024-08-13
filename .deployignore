@@ -17,6 +17,5 @@ phpunit.xml
 configure.php
 DOCKER_ENV
 phpunit.xml
-tests
 .phpcs
 Makefile
