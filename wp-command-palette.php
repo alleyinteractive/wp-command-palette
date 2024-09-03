@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WP Command Palette
+ * Plugin Name: Command Palette Extension
  * Plugin URI: https://github.com/alleyinteractive/wp-command-palette
  * Description: Extend the WordPress Command Palette with all the available admin menu items.
  * Version: 0.1.1
@@ -20,11 +20,6 @@ namespace Alley\WP\Command_Palette;
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
-/**
- * Root directory to this plugin.
- */
-define( 'WP_COMMAND_PALETTE_DIR', __DIR__ );
 
 // Load the plugin's main files.
 require_once __DIR__ . '/src/assets.php';
