@@ -57,6 +57,9 @@ test('should navigate to Add Post and Settings General via palette', async ({ ad
     fullscreenMode: false,
   });
 
+  // Wait a few seconds to ensure the editor is fully loaded.
+  await page.waitForTimeout(3000);
+
   // Open palette and search for "Settings General"
   await page.keyboard.press('Meta+KeyK');
   await expect(page.getByRole('dialog')).toBeVisible();
