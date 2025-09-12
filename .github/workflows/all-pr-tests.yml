@@ -42,6 +42,7 @@ jobs:
         # Defaults to the latest LTS version.
         uses: alleyinteractive/action-test-node@develop
         with:
+          node-version: '20'
           skip-audit: 'true'
 
       - name: Run PHP Tests
