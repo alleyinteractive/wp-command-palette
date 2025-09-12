@@ -1,4 +1,8 @@
+
 import { test, expect } from '@wordpress/e2e-test-utils-playwright';
+
+const isMac = process.platform === 'darwin';
+const paletteShortcut = isMac ? 'Meta+KeyK' : 'Control+KeyK';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/wp-login.php');
@@ -15,8 +19,8 @@ test.beforeEach(async ({ page }) => {
 test('should open command palette and navigate to Permalink Settings', async ({ page }) => {
   await page.goto('/wp-admin/');
 
-  // Open command palette with Cmd+K
-  await page.keyboard.press('Meta+KeyK');
+  // Open command palette with platform shortcut
+  await page.keyboard.press(paletteShortcut);
 
   // Wait for palette to appear (assume role dialog or similar)
   await expect(page.getByRole('dialog')).toBeVisible();
@@ -40,7 +44,7 @@ test('should navigate to Add Post and Settings General via palette', async ({ ad
   await page.goto('/wp-admin/');
 
   // Open palette and search for "Add Post"
-  await page.keyboard.press('Meta+KeyK');
+  await page.keyboard.press(paletteShortcut);
   await expect(page.getByRole('dialog')).toBeVisible();
   await page.keyboard.type('Add Post');
 
@@ -61,7 +65,7 @@ test('should navigate to Add Post and Settings General via palette', async ({ ad
   await page.waitForTimeout(3000);
 
   // Open palette and search for "Settings General"
-  await page.keyboard.press('Meta+KeyK');
+  await page.keyboard.press(paletteShortcut);
   await expect(page.getByRole('dialog')).toBeVisible();
   await page.keyboard.type('Settings Reading');
 
@@ -78,7 +82,7 @@ test('should navigate to Edit Profile via palette', async ({ page }) => {
   await page.goto('/wp-admin/');
 
   // Open palette and search for "edit profile"
-  await page.keyboard.press('Meta+KeyK');
+  await page.keyboard.press(paletteShortcut);
   await expect(page.getByRole('dialog')).toBeVisible();
   await page.keyboard.type('edit profile');
 
@@ -95,7 +99,7 @@ test('should navigate to multisite via palette', async ({ page }) => {
   await page.goto('/wp-admin/');
 
   // Open palette and search for "Test Site"
-  await page.keyboard.press('Meta+KeyK');
+  await page.keyboard.press(paletteShortcut);
   await expect(page.getByRole('dialog')).toBeVisible();
   await page.keyboard.type('Test Site');
 
@@ -112,7 +116,7 @@ test('should navigate to logout via palette', async ({ page }) => {
   await page.goto('/wp-admin/');
 
   // Open palette and search for "Logout"
-  await page.keyboard.press('Meta+KeyK');
+  await page.keyboard.press(paletteShortcut);
   await expect(page.getByRole('dialog')).toBeVisible();
   await page.keyboard.type('Logout');
 
