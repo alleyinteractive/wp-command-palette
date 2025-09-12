@@ -20,3 +20,5 @@ phpunit.xml
 tests
 .phpcs
 Makefile
+playwright.config.ts
+.wp-env.json

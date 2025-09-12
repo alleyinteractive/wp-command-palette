@@ -1,0 +1,9 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/wp-env.json",
+  "core": null,
+  "plugins": [ "." ],
+  "lifecycleScripts": {
+    "afterStart": "bash ./tests/e2e/after-start.sh"
+  },
+  "multisite": true
+}

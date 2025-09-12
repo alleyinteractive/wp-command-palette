@@ -6,9 +6,9 @@ Tags: alleyinteractive, wp-command-palette
 
 Stable tag: 0.1.1
 
-Requires at least: 6.4
+Requires at least: 6.5
 
-Tested up to: 6.5
+Tested up to: 6.8
 
 Requires PHP: 8.1
 
