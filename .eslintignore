@@ -1,2 +1,4 @@
 build
 vendor
+tests/e2e
+playwright.config.ts
