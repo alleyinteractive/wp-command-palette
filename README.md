@@ -14,6 +14,8 @@ Requires PHP: 8.1
 
 License: GPL v2 or later
 
+[![All Pull Request Tests](https://github.com/alleyinteractive/wp-command-palette/actions/workflows/all-pr-tests.yml/badge.svg?branch=develop)](https://github.com/alleyinteractive/wp-command-palette/actions/workflows/all-pr-tests.yml)
+
 Extend the WordPress Command Palette with all the available admin menu items.
 
 ## Installation
