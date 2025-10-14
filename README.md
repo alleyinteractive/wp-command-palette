@@ -16,6 +16,9 @@ License: GPL v2 or later
 
 [![All Pull Request Tests](https://github.com/alleyinteractive/wp-command-palette/actions/workflows/all-pr-tests.yml/badge.svg?branch=develop)](https://github.com/alleyinteractive/wp-command-palette/actions/workflows/all-pr-tests.yml)
 
+> [!IMPORTANT]
+> [With WordPress 6.9](https://github.com/WordPress/gutenberg/pull/71335), this plugin will no longer be necessarry as core has re-implemented the admin menu search feature. This plugin will eventually be archived once all dependent projects at Alley no longer require it.
+
 Extend the WordPress Command Palette with all the available admin menu items.
 
 ## Installation
